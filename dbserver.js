@@ -25,12 +25,12 @@ app.get('/:collection', function(req, res) {
 
 // create -> POST /collection
 app.post('/:collection', function(req, res){
-  console.log('create ' + req.params.collection);
-  console.log(req.body.id);
-  req.body.id = idCounter++;
-  data[req.params.collection] = data[req.params.collection] || [];
-  data[req.params.collection].push(req.body);
-  res.send({ id: req.body.id });
+  var collection = db.get(req.params.collection);
+  collection.insert(req.body, function (err, doc) {
+        if (err) throw err;
+      });
+  console.log('insert ' + req.params.collection + ' - ' + req.params.id);
+  res.send(200);
 });
 
 // read -> GET /collection[/id]
