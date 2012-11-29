@@ -1,0 +1,17 @@
+{
+  "author": "Daniel Beilinson <beilinson@gmail.com>",
+  "name": "monkbone",
+  "description": "MongoDB restful server for Backbone.js",
+  "version": "0.0.1",
+  "dependencies": {
+      "underscore": "*",
+      "express": "*",
+      "monk": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}

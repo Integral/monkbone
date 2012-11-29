@@ -1,0 +1,7 @@
+{
+  "url": "url-to-mongo-database.com",
+  "database": "sampledb",
+  "user": "admin",
+  "pass": "admin",
+  "collections": ["colors", "animals", "users"]
+}
