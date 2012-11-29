@@ -23,8 +23,8 @@ app.get('/:collection', function(req, res) {
   });
 });
 
-// create -> POST /collection
-app.post('/:collection', function(req, res){
+// create -> PUT /collection
+app.put('/:collection', function(req, res){
   var collection = db.get(req.params.collection);
   collection.insert(req.body, function (err, doc) {
         if (err) throw err;
